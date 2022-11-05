@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Cookbook</title>
+    <link rel="stylesheet" href="static/site.css">
+    <link rel="stylesheet" href="static/recipe.css">
+    <link rel="stylesheet" href="static/form.css">
+    <script src="/src/app.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>My Cookbook</h1>
+        <nav class="navigation">
+            <a href="/" class="active">Catalog</a>
+            <div id="user">
+                <a href="/create">Create Recipe</a>
+                <a href="/logout">Logout</a>
+            </div>
+            <div id="guest">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main class = "main-content">
+        <section class="home">
+            <h2>Catalog</h2>
+            <div class="recipe-list">
+                
+            </div>
+        </section>
+        <section class ="register">
+            <h2>Register</h2>
+            <form>
+                <label>E-mail: <input type="text" name="email"></label>
+                <label>Password: <input type="password" name="password"></label>
+                <label>Repeat: <input type="password" name="rePass"></label>
+                <input type="submit" value="Register">
+            </form>
+        </section>
+        <section class="login">
+            <h2>Login</h2>
+            <form>
+                <label>E-mail: <input type="text" name="email"></label>
+                <label>Password: <input type="password" name="password"></label>
+                <input type="submit" value="Login">
+            </form>
+        </section>
+        <section class="create">
+            <h2>New Recipe</h2>
+            <form>
+                <label>Name: <input type="text" name="name" placeholder="Recipe name"></label>
+                <label>Image: <input type="text" name="img" placeholder="Image URL"></label>
+                <label class="ml">Ingredients: <textarea name="ingredients" placeholder="Enter ingredients on separate lines"></textarea></label>
+                <label class="ml">Preparation: <textarea name="steps" placeholder="Enter preparation steps on separate lines"></textarea></label>
+                <input type="submit" value="Create Recipe">
+            </form>
+        </section>
+        <section class="not-found">
+            <h2>Not Found</h2>
+        </section>
+    </main>
+</body>
+
+</html>
